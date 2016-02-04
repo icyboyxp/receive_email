@@ -2,9 +2,9 @@
 
 include("mail.class.php");
 
-$obj = new receiveMail('hujirong317@163.com', 'happy2016', 'imap.163.com', 'imap', '993', true);
+$obj = new receiveMail('邮箱地址', '客户端授权码', 'imap.163.com', 'imap', '993', true);
 $obj->connect();
-$emails = $obj->getTotalMails('NEW');
+$emails = $obj->getTotalMails('NEW'); //NEW 获取最新未读的 ALL 获取所有的
 echo "Total Mails:: " . count($emails) . PHP_EOL . PHP_EOL;
 
 if ($emails) {
