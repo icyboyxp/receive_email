@@ -13,7 +13,7 @@ class receiveMail
         $mailServer = 'localhost',
         $serverType = 'pop',
         $port = '110',
-        $ssl = true
+        $ssl = false
     ) {
         if ($serverType == 'imap') {
             if ($port == '') {

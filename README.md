@@ -19,7 +19,7 @@ make && make install
 
 include("mail.class.php");
 
-$obj = new receiveMail('邮箱地址', '客户端授权码', 'imap.163.com', 'imap', '993', “ssl加密，默认true”);
+$obj = new receiveMail('邮箱地址', '客户端授权码', 'imap.163.com', 'imap', '993', “是否ssl”);
 $obj->connect();
 $emails = $obj->getTotalMails('NEW');
 echo "Total Mails:: " . count($emails) . PHP_EOL . PHP_EOL;
